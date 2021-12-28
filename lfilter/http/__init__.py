@@ -1,3 +1,5 @@
-from filter import Filter
+from .filter import Filter
+
+__all__=['Filter']
 
 

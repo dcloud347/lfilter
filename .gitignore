@@ -3,5 +3,8 @@ test.py
 __pycache__
 .DS_Store
 templates
-lfilter.egg-info
+lfilterpy.egg-info
 dist
+package.json
+test.spec
+build

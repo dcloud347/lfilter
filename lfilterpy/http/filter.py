@@ -31,6 +31,8 @@ class Filter:
         except ConnectionRefusedError:
             print("连接失败!!!")
             self.input.remove(self.sock)
+        except socket.gaierror:
+            sock.connect(("www."+domain, 80))
         request_url = 'GET {0} HTTP/1.0\r\nHost: {1}\r\n\r\n'.format(suburl, domain)
         sock.send(request_url.encode())
         sock.settimeout(15)
@@ -59,14 +61,18 @@ class Filter:
             domain = domain.strip()
             if domain in self.targets:
                 try:
-                    content = open(self.file, "r")
+                    content = open(self.file, "r",encoding="utf-8")
                 except FileNotFoundError:
                     print("文件未找到")
+                    sys.exit(1)
                 c.send(content.read().encode())
             else:
                 if method != "CONNECT":
                     response = self.get_data(domain, url)
-                    c.sendall(response)
+                    try:
+                        c.sendall(response)
+                    except BrokenPipeError:
+                        pass
         c.close()
 
     def start_new_process(self):
@@ -85,7 +91,7 @@ class Filter:
 
     def start(self):
         try:
-            self.proxy_sys()
             print('service start successfully!')
+            self.proxy_sys()
         except KeyboardInterrupt:
             sys.exit(1)

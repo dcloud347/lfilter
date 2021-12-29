@@ -8,3 +8,4 @@ dist
 package.json
 test.spec
 build
+.gitignore

@@ -8,8 +8,9 @@ Lfilter
 
 Installation
 ------------
+installation using pip:
 
-pip install lfilterpy
+    pip install lfilterpy
 
 How to use?
 -----------------

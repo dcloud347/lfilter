@@ -6,7 +6,7 @@ setup(name='lfilterpy',
 
       url='https://github.com/dcloud347/lfilter',
 
-      license='MIT',
+      license='MIT License',
 
       author='dcloud347',
 

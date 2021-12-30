@@ -1,7 +1,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/dcloud347/lfilter)](https://github.com/dcloud347/lfilter/issues)
 [![GitHub forks](https://img.shields.io/github/forks/dcloud347/lfilter)](https://github.com/dcloud347/lfilter/network)
 [![GitHub stars](https://img.shields.io/github/stars/dcloud347/lfilter)](https://github.com/dcloud347/lfilter/stargazers)
-[![GitHub license](https://img.shields.io/github/license/dcloud347/lfilter)]
+[![GitHub license](https://img.shields.io/github/license/dcloud347/lfilter)](https://github.com/dcloud347/lfilter/license)
 
 Lfilter
 ===============

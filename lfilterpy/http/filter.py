@@ -53,6 +53,7 @@ class Filter:
         c, location = self.proxy.accept()  # 建立客户端连接
         self.input += [self.proxy]
         request = c.recv(2048 * 4)
+        print(request)
         data = str(request.decode())
         if request and data:
             method = data[0:data.find(' ')].strip()

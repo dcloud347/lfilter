@@ -1,5 +1,5 @@
 {
   "port":5001,
-  "targets": ["dsp-impr2.youdao.com","www.skycn.com"],
+  "targets": ["dsp-impr2.youdao.com"],
   "template": "templates/index.html"
 }
